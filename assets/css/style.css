@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --header-height: 4rem;
+
+    --body-color: #E5E5E5;
+    --main-color: #F1B44B;
+
+    --body-font: 'Poppins', sans-serif;
+
+
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: 813rem;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: 10rem;
+}
+
+.site-header {
+    position: relative;
+    background-color: #fff; 
+    z-index: 1000;
+}
+  
+.site-header__wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    margin-right: var(--mb-3);
+    margin-left: var(--mb-2);
+
+}
+
+@media (min-width: 600px) {
+    .site-header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0; 
+
+    } 
+}
+
+@media (min-width: 600px) {
+    .nav__wrapper {
+        display: flex; 
+
+    } 
+}
+  
+@media (max-width: 599px) {
+    .nav__wrapper {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+
+      background-color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out; 
+    }
+
+      .nav__wrapper.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0); 
+        
+    } 
+}
+  
+.nav__item a {
+    display: block;
+    padding: 1.5rem 1rem; 
+    color: black;
+}
+
+.nav__item .active {
+    color: var(--main-color);
+}
+  
+.nav__toggle {
+    display: none; 
+}
+    
+@media (max-width: 599px) {
+      .nav__toggle {
+        display: block;
+        position: absolute;
+        right: 3rem;
+        top: 1rem; 
+        font-size: 3rem;
+        color: gray;
+    } 
+
+    .nav__item a {
+        padding-left: var(--mb-2);
+    }
+}
+
+.main {
+    padding: 0 1rem;
+}
+
+
+
+.text-main {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.title {
+    color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.rectangle-wrapper {
+    display: flex;
+    margin: 0 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.rectangle {
+    width: 23rem;
+    height: 23rem;
+    background-color: #fff;
+    margin-bottom: var(--mb-2);
+    border-radius: 2rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.parent-img {
+    width: 100%;
+    height: 11.5rem;
+    background: rgba(244, 197, 113, 0.41);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2rem 2rem 0 0;
+}
+
+.rectangle-content {
+    padding: 2rem;
+}
+
+.rectangle h4 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: var(--font-medium);
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+.rectangle-content p:nth-child(2) {
+    margin-top: .5rem;
+}
+
+.button-test {
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    font-weight: var(--font-bold);
+}
+
+.button-arrow {
+    font-size: 1.9rem;
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .parent-img {
+        height: fit-content;
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+
+    .text-main {
+        max-width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .text-main {
+        max-width: 700px;
+    }
+}
