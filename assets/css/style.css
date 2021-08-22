@@ -197,11 +197,89 @@ img {
     align-items: center;
     color: var(--main-color);
     font-weight: var(--font-bold);
+    cursor: pointer ;
 }
 
 .button-arrow {
     font-size: 1.9rem;
+}
 
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-container {
+    margin-top: var(--mb-3);
+    width: 30rem;
+    height: 70rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.test-explanation {
+    padding: var(--mb-3) var(--mb-2)    ;
+}
+
+.test-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.test-container p {
+    margin-top: var(--mb-1-5);
+    font-size: 1rem;
+}
+
+.test-container h2 {
+    text-align: center;
+    margin-top: var(--mb-2);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: var(--mb-1);
+}
+
+.panduan {
+    padding: 0 var(--mb-1);
+}
+
+.button-mulai {
+    background-color: var(--main-color);
+    color: #fff;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1.5rem 0 0 0;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
+}
+
+.button-mulai:hover {
+    background-color: chocolate;
+}
+
+.img-area {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-img {
+    background-color: #FAE7C5 ;
+    height: 100%;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 50%;
 }
 
 @media screen and (max-width: 350px) {
@@ -261,8 +339,22 @@ img {
     .rectangle p {
         font-size: 12pt;
     }
+
+    .test-container {
+        width: 30rem;
+        height: 70rem;
+        flex-direction: column;
+    }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
+    .test-container {
+        width: 70rem;
+        height: 30rem;
+        flex-direction: row;
+    }
 
+    .test-explanation {
+        padding: var(--mb-3) 4rem    ;
+    }
 }
