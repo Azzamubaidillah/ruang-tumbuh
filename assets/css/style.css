@@ -302,31 +302,7 @@ img {
         height: fit-content;
     }
 
-    .test-container {   
-        max-width: 20rem;
-        height: 80rem;
-    }
 
-    .test-container h1 {
-        font-size: 1rem;
-        font-weight: 600;
-    }
-    
-    .test-container p {
-        margin-top: var(--mb-1-5);
-        font-size: 0.8rem;
-    }
-    
-    .test-container h2 {
-        margin-top: var(--mb-2);
-        font-size: .8rem;
-        font-weight: 500;
-        margin-bottom: var(--mb-1);
-    }
-
-    .panduan {
-        font-size: 0.8rem;
-    }
 
 }
 
@@ -379,6 +355,32 @@ img {
 
     .rectangle p {
         font-size: 12pt;
+    }
+
+    .test-container {   
+        max-width: 20rem;
+        height: 80rem;
+    }
+
+    .test-container h1 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .test-container p {
+        margin-top: var(--mb-1-5);
+        font-size: 0.8rem;
+    }
+    
+    .test-container h2 {
+        margin-top: var(--mb-2);
+        font-size: .8rem;
+        font-weight: 500;
+        margin-bottom: var(--mb-1);
+    }
+
+    .panduan {
+        font-size: 0.8rem;
     }
 
 }
