@@ -236,7 +236,6 @@ img {
 }
 
 .test-container h2 {
-    text-align: center;
     margin-top: var(--mb-2);
     font-size: 1.2rem;
     font-weight: 500;
@@ -245,6 +244,22 @@ img {
 
 .panduan {
     padding: 0 var(--mb-1);
+}
+
+.btn-mulai-div {
+    margin-top: 2.5rem;
+    color: red;
+}
+
+.btn-mulai {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
 }
 
 .button-mulai {
@@ -285,6 +300,32 @@ img {
 @media screen and (max-width: 350px) {
     .parent-img {
         height: fit-content;
+    }
+
+    .test-container {   
+        max-width: 20rem;
+        height: 80rem;
+    }
+
+    .test-container h1 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .test-container p {
+        margin-top: var(--mb-1-5);
+        font-size: 0.8rem;
+    }
+    
+    .test-container h2 {
+        margin-top: var(--mb-2);
+        font-size: .8rem;
+        font-weight: 500;
+        margin-bottom: var(--mb-1);
+    }
+
+    .panduan {
+        font-size: 0.8rem;
     }
 
 }
@@ -340,11 +381,11 @@ img {
         font-size: 12pt;
     }
 
-    .test-container {
-        width: 30rem;
-        height: 70rem;
-        flex-direction: column;
-    }
+}
+
+@media  screen and (max-width: 720px){
+    
+    
 }
 
 @media screen and (min-width: 1024px) {
