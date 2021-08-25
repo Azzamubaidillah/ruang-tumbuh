@@ -297,6 +297,30 @@ img {
     width: 50%;
 }
 
+#question {
+    margin: var(--mb-2) 0;
+}
+
+.question-container {
+    max-width: 50rem;
+    margin: 0 1.5rem;
+}
+
+.choice-container {
+    background-color: #fff;
+    margin: var(--mb-1) 0;
+    padding: var(--mb-1-5) var(--mb-2);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+}
+
+.progress {
+    height: 2px;
+    border-radius: .25rem;
+    background-color: var(--main-color);
+}
+
+
 @media screen and (max-width: 350px) {
     .parent-img {
         height: fit-content;
@@ -358,7 +382,7 @@ img {
     }
 
     .test-container {   
-        max-width: 24rem;
+        max-width: 23rem;
         height: 50rem;
     }
 
@@ -382,6 +406,8 @@ img {
     .panduan {
         font-size: 0.8rem;
     }
+
+    
 
 }
 
