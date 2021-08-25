@@ -6,6 +6,7 @@ let acceptingAnswers = true
 let questionCounter = 0
 let availableQuestions = []
 
+
 let questions = [
     {
         question: 'What is 2 + 2?',
@@ -44,7 +45,7 @@ let questions = [
 
 const MAX_QUESTIONS = 4
 
-startGame = () => {
+startQuiz = () => {
     questionCounter = 0
     availableQuestions = [...questions]
     getNewQuestion()
@@ -74,6 +75,7 @@ getNewQuestion = () => {
     acceptingAnswers = true
 }
 
+
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
@@ -82,7 +84,7 @@ choices.forEach(choice => {
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset['number']
 
-        selectedChoice.parentElement.classList.add(classToApply)
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
@@ -91,6 +93,3 @@ choices.forEach(choice => {
         }, 1000)
     })
 })
-
-
-startGame()
