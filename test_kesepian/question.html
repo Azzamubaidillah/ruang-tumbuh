@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
+
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <link rel="icon" 
@@ -48,7 +49,17 @@
                     <p class="choice-text" data-number="4">Choice 4</p>
                 </div>
 
-                <span class="progress"></span>
+                <div id="hud">
+                    <div class="hud-item">
+                        <p id="progressText" class="hud-prefix">
+                            Question
+                        </p>
+                        <div id="progressBar">
+                            <div id="progressBarFull"></div>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 

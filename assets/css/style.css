@@ -127,11 +127,12 @@ img {
     display: none; 
 }
 
-
 .main {
-    padding: 0 1rem;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .text-main {
     margin: 3rem auto;
@@ -148,23 +149,25 @@ img {
 .container {
     display: flex;
     justify-content: center;
-
 }
 
 .rectangle-wrapper {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    max-width: 70rem;
+
 }
 
 
 .rectangle {
     width: 20rem;
-    height: 20rem;
+    height: 25rem;
     background-color: #fff;
     margin-bottom: var(--mb-2);
     border-radius: 2rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    margin: var(--mb-1);
 }
 
 .parent-img {
@@ -173,6 +176,15 @@ img {
     background: rgba(244, 197, 113, 0.41);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 2rem 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent-img img {
+    height: 70%;
+    
+    object-fit: cover;
 }
 
 .rectangle-content {
@@ -195,13 +207,27 @@ img {
 .button-test {
     display: flex;
     align-items: center;
-    color: var(--main-color);
     font-weight: var(--font-bold);
     cursor: pointer ;
+    background-color: var(--main-color);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
+    margin-top: var(--mb-1);
+    top: 0;
+}
+
+.button-test:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
 }
 
 .button-arrow {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
 }
 
 .container-wrapper {
@@ -253,7 +279,7 @@ img {
 
 .btn-mulai {
     background-color: var(--main-color);
-    color: #fff;
+    color: #000;
     padding: 1rem 5rem;
     border-radius: 1rem;
     font-size: 1rem;
@@ -262,17 +288,10 @@ img {
     cursor: pointer;
 }
 
-.button-mulai {
-    background-color: var(--main-color);
-    color: #fff;
-    width: 100%;
-    padding: 1rem 0;
-    margin: 1.5rem 0 0 0;
-    border-radius: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-style: none;
-    cursor: pointer;
+.btn-mulai:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
 }
 
 .button-mulai:hover {
@@ -312,6 +331,13 @@ img {
     padding: var(--mb-1-5) var(--mb-2);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.choice-container:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
 }
 
 .progress {
@@ -319,6 +345,63 @@ img {
     border-radius: .25rem;
     background-color: var(--main-color);
 }
+
+#hud {
+    display: flex;
+    justify-content: center;
+}
+
+.hud-prefix {
+    text-align: center;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-container {
+    width: 30rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.result-container img {
+    border-radius: 2rem 2rem 0 0;
+}
+
+.result-text {
+    padding: 2rem;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content:center
+}
+
+.button-back {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
+    margin-top: var(--mb-2);
+}
+
 
 
 @media screen and (max-width: 350px) {
@@ -365,7 +448,7 @@ img {
 
     .rectangle {
         width: 23rem;
-        height: 23rem;
+        height: 26rem;
     }
 
     .text-main {
@@ -425,5 +508,15 @@ img {
 
     .test-explanation {
         padding: var(--mb-3) 4rem    ;
+    }
+
+    .result-container {
+        width: 40rem;
+    }
+
+    .result-container img {
+        max-height: 10rem;
+        width: 100%;
+        object-fit:cover;
     }
 }
