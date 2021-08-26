@@ -218,6 +218,7 @@ img {
     cursor: pointer;
     margin-top: var(--mb-1);
     top: 0;
+    color: #fff;
 }
 
 .button-test:hover {
@@ -279,7 +280,7 @@ img {
 
 .btn-mulai {
     background-color: var(--main-color);
-    color: #000;
+    color: #fff;
     padding: 1rem 5rem;
     border-radius: 1rem;
     font-size: 1rem;
@@ -325,10 +326,13 @@ img {
     margin: 0 1.5rem;
 }
 
+.choice-text {
+    padding: var(--mb-1-5) var(--mb-2);
+}
+
 .choice-container {
     background-color: #fff;
     margin: var(--mb-1) 0;
-    padding: var(--mb-1-5) var(--mb-2);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
     border-radius: 1rem;
     cursor: pointer;
@@ -490,7 +494,9 @@ img {
         font-size: 0.8rem;
     }
 
-    
+    .result-container {
+        max-width: 23rem;
+    }
 
 }
 
@@ -512,11 +518,5 @@ img {
 
     .result-container {
         width: 40rem;
-    }
-
-    .result-container img {
-        max-height: 10rem;
-        width: 100%;
-        object-fit:cover;
     }
 }
